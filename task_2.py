@@ -52,8 +52,7 @@ def check_map(map):
                     check_neighbours(map, i, j, forest)
                     forests.append(forest)
     #print(forests)
-    number_of_forests = len(forests)
-    print('Number of isolated forests: ', number_of_forests)
+    return forests
 
 # range of cells around a cell in a grid
 def range_around_cell(map, i, j):
@@ -129,4 +128,4 @@ n = input('Please, enter number of rows\n')
 m = input('Please, enter number of columns\n')
 map = create_map(n,m)
 print_map(map)
-check_map(map)
+print('Number of isolated forests: ', len(check_map(map)))
