@@ -124,8 +124,12 @@ def check_neighbours(map, i, j, forest):
                     #print('This cell is not a tree', k, l)
                     continue
 
-n = input('Please, enter number of rows\n')
-m = input('Please, enter number of columns\n')
-map = create_map(n,m)
-print_map(map)
-print('Number of isolated forests: ', len(check_map(map)))
+def main_part():
+    n = input('Please, enter number of rows\n')
+    m = input('Please, enter number of columns\n')
+    map = create_map(n,m)
+    print_map(map)
+    print('Number of isolated forests: ', len(check_map(map)))
+
+if __name__ == '__main__':
+    main_part()
